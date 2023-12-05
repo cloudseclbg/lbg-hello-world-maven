@@ -19,14 +19,15 @@ pipeline {
                     sh "mvn clean compile"
                 }
             }
-            stage('Test') {
-                steps {
-                    sh "mvn -Dmaven.compile.skip test"
+ //           stage('Test') {
+  //              steps {
+   //                 sh "mvn -Dmaven.compile.skip test"
                 }
             }
             stage('Package') {
                 steps {
-                    sh "mvn -Dmaven.test.skip package"
+//                    sh "mvn -Dmaven.test.skip package"
+                     sh "mvn package"                   
                 }
             }
         }
